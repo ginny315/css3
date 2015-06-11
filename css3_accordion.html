@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+  .AccordionMenu{
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    width: 500px;
+  }
+
+  .AccordionMenu h2{
+    margin: 5px 0;
+    padding: 0;
+    position: relative;
+  }
+/* 向下三角效果 */
+  .AccordionMenu h2:before{
+    border: 5px solid #fff;
+    border-color: #fff transparent transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right:10px;
+    top:15px;
+    width: 0;
+  }
+/* 标题效果 */
+  .AccordionMenu h2 a{
+    background: #8f8f8f;
+    background: -moz-linear-gradient(top,#cecece,#8f8f8f);
+    background: -webkit-linear-gradient(top,#cecece,#8f8f8f);
+    background: -webkit-gradient(linear,left top,left bottom,from(#cecece),to(#8f8f8f));
+    background: -o-linear-gradient(top,#cecece,#8f8f8f);
+    background: linear-gradient(top,#cecece,#8f8f8f);
+    border-radius: 5px;
+    color: #424242;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 10px;
+    text-shadow:2px 2px 2px #aeaeae;
+    text-decoration: none;
+  }
+
+  .AccordionMenu:target h2 a,
+  .AccordionMenu h2 a :focus,
+  .AccordionMenu h2 a :hover,
+  .AccordionMenu h2 a :active,{
+    background: #2288dd;
+    background: -moz-linear-gradient(top,#6bb2ff,#2288dd);
+    background: -webkit-linear-gradient-linear-gradient(top,#6bb2ff,#2288dd);
+    background: -o-linear-gradient(top,#6bb2ff,#2288dd);
+    background: linear-gradient(top,#6bb2ff,#2288dd); 
+    color:#fff;
+  }
+
+  .AccordionMenu p{
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    -moz-transition:height 0.5s ease-in;
+    -webkit-transition:height 0.5s ease-in;
+    -o-transition:height 0.5s ease-in;
+    transition:height 0.5s ease-in;
+  }
+
+  .AccordionMenu :target p{
+    height: 100px;
+    overflow: auto;
+  }
+
+  .AccordionMenu :target h2:before{
+    border-color: transparent transparent transparent #fff;
+  }
+
+    </style>
+</head>
+<body>
+<div class="AccordionMenu">
+  <div class="MenuSection" id="brand">
+    <h2><a href="#brand">Brand</a></h2>
+    <p>first pessage</p>
+  </div>
+
+  <div class="MenuSection" id="protomotion">
+    <h2><a href="#protomotion">Protomation</a></h2>
+    <p>second pessage</p>
+  </div>
+
+  <div class="MenuSection" id="event">
+    <h2><a href="#event">Event</a></h2>
+    <p>third pessage</p>
+  </div>
+</div>
+</body>
+
+</html>
