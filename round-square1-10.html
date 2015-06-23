@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.demo{
+			width: 300px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			overflow: hidden;
+			margin:20px auto;
+		}
+
+		.demo a{
+			float: left;
+			display: block;;
+			height: 50px;
+			width: 50px;
+			border-radius: 10px;
+			text-align: center;
+			background: #aac;
+			color: blue;
+			font: bold 20px/50px Arial;
+			margin-right: 5px;
+			text-decoration: none;
+			margin:5px;
+		}
+
+		a[id]{
+			background: yellow;
+		}
+
+		a[title="1"]
+		/* a[id][title] */{
+			background: #c00;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="demo">
+	<a href="" class="links item" id="first" title="1">1</a>
+	<a href="" class="links item" >2</a>
+	<a href="" class="links item" >3</a>
+	<a href="" class="links item" >4</a>
+	<a href="" class="links item" >5</a>
+	<a href="" class="links item" >6</a>
+	<a href="" class="links item" >7</a>
+	<a href="" class="links item" >8</a>
+	<a href="" class="links item" >9</a>
+	<a href="" class="links item" id="last">9</a>
+	</div>
+</body>
+</html>
