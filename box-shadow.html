@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<style type="text/css">
+div{
+	width: 200px;
+	height: 100px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	margin:20px;
+}
+
+/* x-offset + right
+x-offset - left
+y-offset + bottom
+y-offset - top */
+.top{
+	box-shadow: 0 -2px 0 red;
+}
+.right{
+	box-shadow: 2px 0 0 green;
+}
+.bottom{
+	box-shadow: 0 2px 0 blue;
+}
+.left{
+	box-shadow: -2px 0 0 orange;
+}
+
+/* there are spread box-shadow,not satisfied */
+.topblur{
+	box-shadow: 0 -2px 5px red;
+}
+.rightblur{
+	box-shadow: 2px 0 5px green;
+}
+.bottomblur{
+	box-shadow: 0 2px 5px blue;
+}
+.leftblur{
+	box-shadow: -2px 0 5px orange;
+}
+
+/* the forth represent spread */
+.topblur2{
+	box-shadow: 0 -4px 5px -3px red;
+}
+.rightblur2{
+	box-shadow: 4px 0 5px -3px green;
+}
+.bottomblur2{
+	box-shadow: 0 4px 5px -3px blue;
+}
+.leftblur2{
+	box-shadow: -4px 0 5px -3px orange;
+}
+
+.border{
+	box-shadow: 0 0 10px 10px #06c;
+}
+.border1{
+	box-shadow: 0 0 10px -10px #06c;
+}
+.border2{
+	box-shadow: 0 0 0px 10px #06c;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="top"></div>
+<div class="right"></div>
+<div class="bottom"></div>
+<div class="left"></div>
+
+<div class="topblur"></div>
+<div class="rightblur"></div>
+<div class="bottomblur"></div>
+<div class="leftblur"></div>
+
+<div class="topblur2"></div>
+<div class="rightblur2"></div>
+<div class="bottomblur2"></div>
+<div class="leftblur2"></div>
+
+<div class="border"></div>
+<div class="border1"></div>
+<div class="border2"></div>
+
+</body>
+
+</html>
