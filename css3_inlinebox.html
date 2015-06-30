@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+
+		body>div{
+			border: 1px solid #ccc;
+			margin: 20px;
+			padding: 10px;
+		}
+
+		div>div{
+			border: 1px solid #f36;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		/* 伸缩容器设置 */
+		.box{
+			display: -moz-box;
+			display: -webkit-box;
+			display: box;
+		}
+
+		.inlinebox{
+			display: -moz-inline-box;
+			display: -webkit-inline-box;
+			display: inline-box;
+		}
+
+		/* 改变伸缩流方向 */
+		.box-horizonal{
+			box-orient:horizontal;
+			-moz-box-orient:horizontal;
+			-webkit-box-orient:horizontal;
+		}
+
+		.box-vertical{
+			box-orient:vertical;
+			-moz-box-orient:vertical;
+			-webkit-box-orient:vertical;
+		}
+
+		.box-inline-axis{
+			box-orient:inline-axis;
+			-moz-orient:inline-axis;
+			-webkit-orient:inline-axis;
+		}
+
+		.box-block-axis{
+			box-orient:block-axis;
+			-moz-box-orient:block-axis;
+			-webkit-box-orient:block-axis;
+		}
+
+		/* 布局顺序 */
+		.box-direction-reverse{
+			box-direction:reverse;
+			-moz-box-direction:reverse;
+			-webkit-box-direction:reverse;
+		}
+		
+		/* 溢出发生时伸缩换行 */
+		.box1{
+			display: box;
+			-moz-display: box;
+			-webkit-display: box;
+
+			box-pack:start;
+			-moz-box-pack:start;
+			-webkit-box-pack:start;
+			box-align:start;
+			-moz-box-pack:start;
+			-webkit-box-pack:start;
+			box-lines:multiple;
+			-moz-box-lines:multiple;
+			-webkit-box-lines:multiple;
+		}
+
+
+	</style>
+	<title>inline box</title>
+</head>
+<body>
+	<div class="box">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="inlinebox">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+
+
+	<div class="box box-horizonal">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-vertical">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-inline-axis">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-block-axis">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+
+
+	<div class="box box-horizonal">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-horizonal box-direction-reverse">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-vertical">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box box-vertical box-direction-reverse">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+
+	<div class="box1 box-horizonal">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+		<div>E</div>
+		<div>F</div>
+		<div>G</div>
+		<div>H</div>
+		<div>I</div>
+		<div>J</div>
+		<div>K</div>
+	</div>
+
+	<div class="box1 box-vertical">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+		<div>E</div>
+		<div>F</div>
+		<div>G</div>
+		<div>H</div>
+		<div>I</div>
+		<div>J</div>
+		<div>K</div>
+	</div>
+</body>
+</html>
