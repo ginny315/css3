@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+.ani_dot {
+    font-family: simsun;    
+}
+
+:root .ani_dot { /* 这里使用Hack是因为IE6~IE8浏览器下， vertical-align解析不规范，值为bottom或其他会改变按钮的实际高度*/
+    display: inline-block;
+    width: 1.5em;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+@-webkit-keyframes dot {
+    0% { 
+    	width: 0; 
+    	margin-right: 1.5em; 
+    }
+    33% { 
+    	width: .5em; 
+    	margin-right: 1em; 
+    }
+    66% { 
+    	width: 1em; 
+    	margin-right: .5em; 
+    }
+    100% { 
+    	width: 1.5em; 
+    	margin-right: 0;
+    }
+}
+
+.ani_dot {
+    -webkit-animation: dot 3s infinite step-start;
+}
+
+@keyframes dot {
+    0% { 
+    	width: 0; 
+    	margin-right: 1.5em; 
+    }
+    33% { 
+    	width: .5em; 
+    	margin-right: 1em; 
+    }
+    66% { 
+    	width: 1em; 
+    	margin-right: .5em; 
+    }
+    100% { 
+    	width: 1.5em; 
+    	margin-right: 0;
+    }
+}
+
+.ani_dot {
+    animation: dot 3s infinite step-start;
+}
+	</style>
+<title>Document</title>
+</head>
+<body>
+	提交订单中<span class="ani_dot">...</span>
+</body>
+</html>
