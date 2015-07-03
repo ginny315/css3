@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		.ani_prog {
+    position: relative;    
+}
+.ani_prog::before, .ani_prog::after {
+    content: '';
+    height: 8px;
+    position: absolute; left: 0; right: 0; top: -15px;
+}
+.ani_prog::before{
+    background-color: #ddd;
+}
+.ani_prog::after {
+    padding-right: 0%;
+    background-color: #34538b;
+    background-clip: content-box;
+    box-sizing: border-box;
+    animation: progress 30s;
+}
+/* 等待结束直接到底显示 */
+.ani_prog_finish::after {
+    animation: none;
+}
+
+@keyframes progress {
+   0%   { padding-right: 100%; } 
+   1%   { padding-right: 50%; } 
+   3%   { padding-right: 30%; } 
+   10%  { padding-right: 20%; } 
+   20%  { padding-right: 8%; } 
+   30%  { padding-right: 5%; } 
+   40%  { padding-right: 4%; } 
+   60%  { padding-right: 2%; } 
+   80%  { padding-right: 1%; }   
+}}
+	</style>
+	<title>load pictures</title>
+</head>
+<body>
+<a href="javascript:" id="submit" class="grebtn">提交订单</a>
+
+<a href="javascript:" name="request" class="grebtn" data-url="http://wwww.baidu.com/1.jpg">请求小图</a>
+
+<a href="javascript:" name="request" class="grebtn" data-url="http://wwww.baidu.com/1.jpg">请求大图</a>
+
+<script type="text/javascript">
+$("#submit").bind("click", function() {
+    if (!this.ajaxing) {
+        this.ajaxing = true;
+        this.innerHTML = '提交订单中...';
+        this.className += " ani_prog";
+        setTimeout(function() {
+            this.ajaxing = false;            
+            this.className = "grebtn";
+            this.innerHTML = "提交超时";
+        }.bind(this), 30000);
+    }
+});
+
+$("#request").bind("click", function() {
+    var src = $(this).attr("data-url"), myImg = null;  
+    if (this.loading !== true) {
+        src = src + "?r=" + Date.now();
+        myImg = new Image();
+        // 状态变化
+        this.loading = true;
+        this.innerHTML = '图片请求中...';
+        this.className += " ani_prog";
+        myImg.onload = function() {
+            // 重要一环，动画直接结束
+            this.className += " ani_prog_finish";
+            // 小小定时器，两次渲染
+            setTimeout(function() {
+                this.insertAdjacentHTML("afterend", '<br><br><img src="'+ src +'">');
+                this.className = "grebtn";
+                this.innerHTML = '图片请求成功';
+            }.bind(this), 16);            
+        }.bind(this);
+        myImg.src = src;
+    }
+    return false;	
+});
+</script>
+</body>
+</html>
