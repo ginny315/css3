@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="clearfloat.css">
+	<style type="text/css">
+	*{
+	margin:0;
+	padding:0;
+	border: 0;
+	outline:0;
+}
+
+.wrap{
+	width: 400px;
+	height: 400px;
+	background:red;
+	position: absolute;
+}
+
+.innerwrap{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	background-color: #ccc;
+}
+div{
+	display: inline-block;
+}
+
+.div1{
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	/* margin-top: 10%; *//* depend on its father ,just 100% under his father*/
+	/* padding-top: 10%; *//* depend on its father,big itself,fill with its own color */
+ 	position: absolute;/* depend on its father ,just 100% under his father*/
+	top:10%; 
+	/* -moz-transform:translateY(10%); *//* depend on itself */
+	border: 2px solid #000;
+
+}
+
+.div2{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+}
+
+
+
+	</style>
+	<title>position test</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="innerwrap">
+		<div class="div1"></div>
+		<!-- <div class="div2"></div> -->
+		</div>
+	</div>
+</body>
+</html>
