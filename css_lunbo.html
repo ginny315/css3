@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		img {
+		    width:500px;
+			}
+		.photoGallery {
+		    width: 500px;
+		    overflow-x: auto;
+		    overflow-y: hidden;
+		    white-space: nowrap;
+		    /* Sets up points to which scrolling
+		       will snap along x-axis */
+		    scroll-snap-points-x: repeat(100%);
+		    /* Requires that scrolling always end at a snap point when
+		       the operation completes (hard snap) */
+		    scroll-snap-type: mandatory;
+		}
+	</style>
+	<title>css luo bo</title>
+</head>
+<body>
+	
+<div class="photoGallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+</div>
+</body>
+</html>
