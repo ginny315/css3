@@ -3,26 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<style type="text/css">
-		.text{
-			  background-image: linear-gradient(
-			    to bottom,
-			    #9588DD,
+		body {
+		  font-size: 1em;
+		  line-height: $lh;
+		}
+		@supports (-webkit-background-clip: text) {
+		  p {
+		    -webkit-background-clip: text;
+		    -webkit-text-fill-color: transparent;
+/* 		    background-image: linear-gradient(
+  to bottom,
+  #9588DD,
 			    #9588DD 22px,
 			    #DD88C8 22px,
 			    #DD88C8 44px,
 			    #D3DD88 44px,
 			    #D3DD88 66px,
 			    #88B0DD 66px,
-			    #88B0DD);
-			    -webkit-background-clip: text;
-  				-webkit-text-fill-color: transparent;
-			}
+			    #88B0DD); */
+			background-image: url(test.jpg);
+			font-size: 30px;
+			font-weight: bolder;
+		  }
+		}
+		.text{
+		  -webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		  background-image: linear-gradient(
+		    to bottom,
+		    rgba(white, 0.8),
+		    rgba(white, 0.8) 22px,
+		    rgba(white, 0.6) 22px,
+		    rgba(white, 0.6) 44px,
+		    rgba(white, 0.4) 44px,
+		    rgba(white, 0.4) 66px,
+		    rgba(white, 0.2) 66px,
+		    rgba(white, 0.2));
+		}
 	</style>
 	<title>color words</title>
 </head>
 <body>
-	<div class="text">
-	When you know the line-height,you can make a linear-graient that has hard color stops in between each line of text.Gaperiam nemo saepe sunt enim, perferendis aut numpuan est doloremque tempera moiestias in vero?Eius animi odit earum, fugit optio.
+	<div class="text"><p>
+	When you know the line-height,you can make a linear-graient that has hard color stops in between each line of text.Gaperiam nemo saepe sunt enim, perferendis aut numpuan est doloremque tempera moiestias in vero?Eius animi odit earum, fugit optio.</p>
 	</div>
 </body>
 </html>
